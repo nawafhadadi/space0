@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          
+        }
+      }
+    }
+    
+  </script>
+  <style type = "text/tailwindcss">
+   @keyframes glowing-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box {
+ 
+  position: relative;
+  border-radius: 10px;
+}
+
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 20px;
+  animation: glowing-animation 7s infinite linear;
+}
+
+.box::before {
+  z-index: -1;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  filter: blur(15px);
+  opacity: 0.7;
+}
+
+.box::after {
+  z-index: -2;
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  filter: blur(20px);
+  opacity: 0.5;
+}
+@keyframes co{
+       
+          0%{
+            transform:translate(1100px , 0px) rotate(0deg)
+          }
+          20%{
+            transform:translate(600px , 0px) rotate(-20deg)
+          }
+          50%{
+            transform:translate(10px , 300px)rotate(3deg)
+          }
+          60%{
+            transform:translate(0px , 310px)rotate(2deg)
+          }
+          80%{
+          transform:translate(5px , 320px) rotate(1deg)
+          }
+          100%{
+            transform:translate(-1100px , 0px)rotate(15deg)
+          }
+      
+        }
+        .co{
+          animation: co 15s infinite  ;
+        }
+  </style>
+  
+
+</head>
+<body class="capitalize overflow-x-hidden font-fon w-full h-screen bg-cover bg-no-repeat bg-center bg-[url('/img/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai.jpg')] " >
+  <nav class="flex justify-between h-[100px] items-center ">
+    <a  href=""><img class="w-[100px]" src="/img/NASA-Logo-Large.png" alt=""></a>
+  <ol class="   ">
+    <li class="inline-block mx-2   "><a class=" text-white no-underline hover:bg-orange-400  rounded-md p-2 transition-all duration-500  " href="">about space</a></li>
+    <li class="inline-block mx-2  "><a class="text-white no-underline hover:bg-orange-400  rounded-md p-2 transition-all duration-500" href="">try free</a></li>
+    <li class="inline-block mx-2  "><a class="text-white no-underline hover:bg-orange-400  rounded-md p-2 transition-all duration-500" href="">news</a></li>
+  </ol>
+  <div >
+  <a class="box cursor-pointer no-underline text-white bg-black p-2 rounded-md mr-4  ">sign up</a>
+ 
+  
+</div>
+
+</nav>
+  
+  <div class="flex justify-center items-center ">
+    <img class="co absolute   -rotate-12 top-0    w-44 animate-cosmonaut ease-in  " src="/img/astronaut-graphic-clipart-design-free-png.webp" alt="">
+    <div class="flex justify-center items-center  bg-white bg-opacity-10 w-11/12  h-[670px]    rounded-lg relative top-[40px] ">
+      
+      <a class=" absolute text-white text-xl bg-blue-500 rounded-full px-6 py-1 hover:bg-blue-400 transition-all duration-500 " href="last.html">Start here</a>
+      <a class=" absolute top-96  text-stone-50 border-2  rounded-full px-2 text-center hover:bg-orange-400  transition-all duration-500    " href="">read more</a>
+      <div class="text-5xl  text-white absolute  top-4 left-32">welcome  </div>
+      <div class="text-5xl text-white  bg-clip-text absolute top-16 left-40">to the,</div>
+      <div class="text-5xl text-white absolute top-28 left-32"> space station. </div>
+      <div>
+    </div>
+  </div>
+  
+    
+  </div>
+ 
+</body>
+</html>
